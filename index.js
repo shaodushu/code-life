@@ -13,6 +13,8 @@ const resolvePost = (req) =>
     });
   });
 
+const projectDir = path.resolve(__dirname, ".");
+
 http
   .createServer(async (req, res) => {
     console.log("receive request");
