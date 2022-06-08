@@ -13,7 +13,7 @@ const resolvePost = (req) =>
     });
   });
 
-const projectDir = path.resolve(__dirname, ".");
+const projectDir = path.resolve(__dirname, "./demo");
 
 http
   .createServer(async (req, res) => {
@@ -21,7 +21,7 @@ http
     console.log(req.url);
     if (req.method === "POST" && req.url === "/") {
       const data = await resolvePost(req);
-      exec("rm -f *");
+      exec("rm -f demo/*");
       // 拉取仓库最新代码
       execSync(
         `git clone git@github.com:shaodushu/code-life.git ${projectDir}`,
