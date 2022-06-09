@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  CODE_LIFE:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    image: "code_life_image:${CODE_LIFE_TAG}"
+    container_name: "code_life_container"
+    ports:
+      - "8080:80"
+      - "8081:80"
+      - "8082:80"
+    restart: "always"

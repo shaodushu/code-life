@@ -30,6 +30,11 @@ http
         }
       );
 
+      // execSync(`docker-compose up`, {
+      //   stdio: "inherit",
+      //   cwd: projectDir,
+      // });
+
       // 创建 docker 镜像
       execSync(
         `docker build --rm -f "Dockerfile" -t ${data.repository.name}-image:latest .`,

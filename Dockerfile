@@ -7,3 +7,4 @@ COPY . /usr/share/nginx/html
 ### docker run --rm --name code-life-nginx -p 8080:80 code-life:latest
 
 # sudo service docker start
+# docker-compose up
